@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Aster OS Prism Ridge wallpaper">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1118"/>
+      <stop offset="0.48" stop-color="#17242c"/>
+      <stop offset="1" stop-color="#070a0e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#246bfd" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#54c9ff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#8a7dff" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6c5f" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ff7567" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#ffc26b" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b7f35a" stop-opacity="0"/>
+      <stop offset="0.4" stop-color="#c9ff6a" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#41e6c2" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" seed="14" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="faint">
+        <feFuncA type="table" tableValues="0 0.055"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="screen"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#grain)">
+    <rect width="1920" height="1080" fill="url(#sky)"/>
+    <path d="M-180 868 C300 720 548 826 900 575 C1214 350 1532 348 2110 152 L2110 1120 L-180 1120Z" fill="#101820"/>
+    <path d="M-100 846 C344 677 650 770 978 531 C1260 325 1570 285 2022 154" fill="none" stroke="url(#blue)" stroke-width="118" stroke-linecap="round" filter="url(#soft)"/>
+    <path d="M-154 1028 C328 922 637 876 1031 669 C1352 500 1634 429 2078 360" fill="none" stroke="url(#coral)" stroke-width="86" stroke-linecap="round" filter="url(#soft)"/>
+    <path d="M126 1114 C507 894 720 982 1071 753 C1394 542 1698 600 2046 473" fill="none" stroke="url(#lime)" stroke-width="44" stroke-linecap="round" filter="url(#soft)"/>
+
+    <g fill="none" stroke="#d7e7ef" stroke-opacity="0.12" stroke-width="1.3">
+      <path d="M-50 880 C330 724 598 834 954 579 C1284 343 1569 356 1984 204"/>
+      <path d="M-38 908 C345 755 619 861 976 611 C1298 386 1584 391 2003 242"/>
+      <path d="M-24 937 C359 787 643 894 1001 644 C1318 424 1605 429 2023 282"/>
+      <path d="M-8 968 C381 824 663 927 1024 677 C1345 456 1626 469 2044 327"/>
+      <path d="M8 1000 C397 857 688 963 1050 714 C1373 492 1652 510 2068 373"/>
+    </g>
+
+    <g opacity="0.36">
+      <path d="M1307 0 L1920 0 L1920 442 L1661 522Z" fill="#0a0f15"/>
+      <path d="M0 0 L608 0 L394 232 L0 360Z" fill="#111d25"/>
+      <path d="M154 1080 L927 1080 L729 939Z" fill="#070b0f"/>
+    </g>
+
+    <g fill="none" stroke="#d9f0f5" stroke-opacity="0.18" stroke-width="1">
+      <path d="M1318 74 L1830 74"/>
+      <path d="M1318 98 L1735 98"/>
+      <path d="M1318 122 L1791 122"/>
+      <path d="M92 184 L412 184"/>
+      <path d="M92 208 L355 208"/>
+    </g>
+  </g>
+</svg>
+
