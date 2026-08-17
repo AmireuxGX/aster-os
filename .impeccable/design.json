@@ -1,0 +1,776 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17",
+  "title": "Design System: Aster OS",
+  "extensions": {
+    "colorMeta": {
+      "accent-cobalt": {
+        "role": "primary",
+        "displayName": "Aster Cobalt",
+        "canonical": "#4f8cff",
+        "tonalRamp": [
+          "oklch(15% 0.18 255)",
+          "oklch(25% 0.18 255)",
+          "oklch(35% 0.18 255)",
+          "oklch(48% 0.18 255)",
+          "oklch(60% 0.18 255)",
+          "oklch(72% 0.18 255)",
+          "oklch(84% 0.18 255)",
+          "oklch(95% 0.18 255)"
+        ]
+      },
+      "shell-graphite": {
+        "role": "neutral",
+        "displayName": "Deep Graphite",
+        "canonical": "#090d12",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-ice": {
+        "role": "neutral",
+        "displayName": "Shell Ice",
+        "canonical": "#f4f7fb",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-panel-glass": {
+        "role": "neutral",
+        "displayName": "Graphite Glass",
+        "canonical": "rgba(16, 21, 28, 0.82)",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-panel-solid": {
+        "role": "neutral",
+        "displayName": "Solid Graphite Glass",
+        "canonical": "rgba(17, 22, 29, 0.94)",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-border": {
+        "role": "neutral",
+        "displayName": "Ice Rule",
+        "canonical": "rgba(229, 239, 251, 0.16)",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-light-ink": {
+        "role": "neutral",
+        "displayName": "Light Shell Ink",
+        "canonical": "#18202a",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "shell-light-panel": {
+        "role": "neutral",
+        "displayName": "Frosted Shell",
+        "canonical": "rgba(239, 244, 249, 0.86)",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "window-surface-dark": {
+        "role": "neutral",
+        "displayName": "Dark Window Surface",
+        "canonical": "rgba(20, 24, 31, 0.94)",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-canvas-light": {
+        "role": "neutral",
+        "displayName": "Light App Canvas",
+        "canonical": "#f5f6f8",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-surface-light": {
+        "role": "neutral",
+        "displayName": "Light App Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-ink-light": {
+        "role": "neutral",
+        "displayName": "Light App Ink",
+        "canonical": "#1e232b",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-muted-light": {
+        "role": "neutral",
+        "displayName": "Light App Muted",
+        "canonical": "#667080",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-canvas-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Canvas",
+        "canonical": "#171a20",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-surface-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Surface",
+        "canonical": "#20242b",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-panel-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Panel",
+        "canonical": "#1b1f26",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-raised-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Raised",
+        "canonical": "#292e37",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-ink-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Ink",
+        "canonical": "#edf0f5",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "app-muted-dark": {
+        "role": "neutral",
+        "displayName": "Dark App Muted",
+        "canonical": "#a3acba",
+        "tonalRamp": [
+          "oklch(15% 0.015 250)",
+          "oklch(25% 0.015 250)",
+          "oklch(35% 0.015 250)",
+          "oklch(48% 0.015 250)",
+          "oklch(60% 0.015 250)",
+          "oklch(72% 0.015 250)",
+          "oklch(84% 0.015 250)",
+          "oklch(95% 0.015 250)"
+        ]
+      },
+      "signal-coral": {
+        "role": "secondary",
+        "displayName": "Signal Coral",
+        "canonical": "#ff7567",
+        "tonalRamp": [
+          "oklch(15% 0.16 25)",
+          "oklch(25% 0.16 25)",
+          "oklch(35% 0.16 25)",
+          "oklch(48% 0.16 25)",
+          "oklch(60% 0.16 25)",
+          "oklch(72% 0.16 25)",
+          "oklch(84% 0.16 25)",
+          "oklch(95% 0.16 25)"
+        ]
+      },
+      "signal-lime": {
+        "role": "secondary",
+        "displayName": "Signal Lime",
+        "canonical": "#9edc55",
+        "tonalRamp": [
+          "oklch(15% 0.15 128)",
+          "oklch(25% 0.15 128)",
+          "oklch(35% 0.15 128)",
+          "oklch(48% 0.15 128)",
+          "oklch(60% 0.15 128)",
+          "oklch(72% 0.15 128)",
+          "oklch(84% 0.15 128)",
+          "oklch(95% 0.15 128)"
+        ]
+      },
+      "status-danger": {
+        "role": "tertiary",
+        "displayName": "Status Danger",
+        "canonical": "#f07872",
+        "tonalRamp": [
+          "oklch(15% 0.16 25)",
+          "oklch(25% 0.16 25)",
+          "oklch(35% 0.16 25)",
+          "oklch(48% 0.16 25)",
+          "oklch(60% 0.16 25)",
+          "oklch(72% 0.16 25)",
+          "oklch(84% 0.16 25)",
+          "oklch(95% 0.16 25)"
+        ]
+      },
+      "status-warning": {
+        "role": "tertiary",
+        "displayName": "Status Warning",
+        "canonical": "#dda14f",
+        "tonalRamp": [
+          "oklch(15% 0.14 80)",
+          "oklch(25% 0.14 80)",
+          "oklch(35% 0.14 80)",
+          "oklch(48% 0.14 80)",
+          "oklch(60% 0.14 80)",
+          "oklch(72% 0.14 80)",
+          "oklch(84% 0.14 80)",
+          "oklch(95% 0.14 80)"
+        ]
+      },
+      "status-success": {
+        "role": "tertiary",
+        "displayName": "Status Success",
+        "canonical": "#58bf97",
+        "tonalRamp": [
+          "oklch(15% 0.12 160)",
+          "oklch(25% 0.12 160)",
+          "oklch(35% 0.12 160)",
+          "oklch(48% 0.12 160)",
+          "oklch(60% 0.12 160)",
+          "oklch(72% 0.12 160)",
+          "oklch(84% 0.12 160)",
+          "oklch(95% 0.12 160)"
+        ]
+      },
+      "browser-blue": {
+        "role": "tertiary",
+        "displayName": "Browser Blue",
+        "canonical": "#3f7df0",
+        "tonalRamp": [
+          "oklch(15% 0.18 255)",
+          "oklch(25% 0.18 255)",
+          "oklch(35% 0.18 255)",
+          "oklch(48% 0.18 255)",
+          "oklch(60% 0.18 255)",
+          "oklch(72% 0.18 255)",
+          "oklch(84% 0.18 255)",
+          "oklch(95% 0.18 255)"
+        ]
+      },
+      "notes-amber": {
+        "role": "tertiary",
+        "displayName": "Notes Amber",
+        "canonical": "#d0a323",
+        "tonalRamp": [
+          "oklch(15% 0.14 80)",
+          "oklch(25% 0.14 80)",
+          "oklch(35% 0.14 80)",
+          "oklch(48% 0.14 80)",
+          "oklch(60% 0.14 80)",
+          "oklch(72% 0.14 80)",
+          "oklch(84% 0.14 80)",
+          "oklch(95% 0.14 80)"
+        ]
+      },
+      "terminal-green": {
+        "role": "tertiary",
+        "displayName": "Terminal Green",
+        "canonical": "#43b581",
+        "tonalRamp": [
+          "oklch(15% 0.12 160)",
+          "oklch(25% 0.12 160)",
+          "oklch(35% 0.12 160)",
+          "oklch(48% 0.12 160)",
+          "oklch(60% 0.12 160)",
+          "oklch(72% 0.12 160)",
+          "oklch(84% 0.12 160)",
+          "oklch(95% 0.12 160)"
+        ]
+      },
+      "calculator-coral": {
+        "role": "tertiary",
+        "displayName": "Calculator Coral",
+        "canonical": "#d45f4a",
+        "tonalRamp": [
+          "oklch(15% 0.16 25)",
+          "oklch(25% 0.16 25)",
+          "oklch(35% 0.16 25)",
+          "oklch(48% 0.16 25)",
+          "oklch(60% 0.16 25)",
+          "oklch(72% 0.16 25)",
+          "oklch(84% 0.16 25)",
+          "oklch(95% 0.16 25)"
+        ]
+      },
+      "writer-teal": {
+        "role": "tertiary",
+        "displayName": "Writer Teal",
+        "canonical": "#39738f",
+        "tonalRamp": [
+          "oklch(15% 0.10 220)",
+          "oklch(25% 0.10 220)",
+          "oklch(35% 0.10 220)",
+          "oklch(48% 0.10 220)",
+          "oklch(60% 0.10 220)",
+          "oklch(72% 0.10 220)",
+          "oklch(84% 0.10 220)",
+          "oklch(95% 0.10 220)"
+        ]
+      },
+      "files-steel": {
+        "role": "tertiary",
+        "displayName": "Files Steel",
+        "canonical": "#4d82bf",
+        "tonalRamp": [
+          "oklch(15% 0.18 255)",
+          "oklch(25% 0.18 255)",
+          "oklch(35% 0.18 255)",
+          "oklch(48% 0.18 255)",
+          "oklch(60% 0.18 255)",
+          "oklch(72% 0.18 255)",
+          "oklch(84% 0.18 255)",
+          "oklch(95% 0.18 255)"
+        ]
+      },
+      "calendar-rose": {
+        "role": "tertiary",
+        "displayName": "Calendar Rose",
+        "canonical": "#bf4d5c",
+        "tonalRamp": [
+          "oklch(15% 0.15 10)",
+          "oklch(25% 0.15 10)",
+          "oklch(35% 0.15 10)",
+          "oklch(48% 0.15 10)",
+          "oklch(60% 0.15 10)",
+          "oklch(72% 0.15 10)",
+          "oklch(84% 0.15 10)",
+          "oklch(95% 0.15 10)"
+        ]
+      },
+      "settings-violet": {
+        "role": "tertiary",
+        "displayName": "Settings Violet",
+        "canonical": "#7557c7",
+        "tonalRamp": [
+          "oklch(15% 0.15 295)",
+          "oklch(25% 0.15 295)",
+          "oklch(35% 0.15 295)",
+          "oklch(48% 0.15 295)",
+          "oklch(60% 0.15 295)",
+          "oklch(72% 0.15 295)",
+          "oklch(84% 0.15 295)",
+          "oklch(95% 0.15 295)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Clock",
+        "purpose": "Desktop and lock-screen time with tabular numerals."
+      },
+      "headline": {
+        "displayName": "App Headline",
+        "purpose": "Major app landing and settings headings."
+      },
+      "title": {
+        "displayName": "Section Title",
+        "purpose": "Sidebar, calendar, and compact section titles."
+      },
+      "body": {
+        "displayName": "Productivity Body",
+        "purpose": "Default app copy, controls, and readable working text."
+      },
+      "label": {
+        "displayName": "System Label",
+        "purpose": "Window chrome, metadata, status, and compact navigation."
+      },
+      "mono": {
+        "displayName": "Technical Mono",
+        "purpose": "Terminal sessions, commands, paths, and file previews."
+      }
+    },
+    "shadows": [
+      {
+        "name": "topbar-ambient",
+        "value": "0 5px 18px rgba(4, 7, 11, 0.12)",
+        "purpose": "Separates persistent top chrome from the wallpaper."
+      },
+      {
+        "name": "dock-float",
+        "value": "0 18px 52px rgba(2, 5, 9, 0.30), 0 3px 10px rgba(2, 5, 9, 0.16)",
+        "purpose": "Keeps the dock visibly above the desktop field."
+      },
+      {
+        "name": "panel-float",
+        "value": "0 28px 80px rgba(3, 7, 12, 0.34), 0 5px 18px rgba(3, 7, 12, 0.18)",
+        "purpose": "Launcher, control center, and notification center."
+      },
+      {
+        "name": "window-rest",
+        "value": "0 24px 72px rgba(10, 14, 22, 0.24), 0 4px 14px rgba(10, 14, 22, 0.12)",
+        "purpose": "Default floating window separation."
+      },
+      {
+        "name": "window-active",
+        "value": "0 28px 90px rgba(8, 12, 20, 0.30), 0 7px 20px rgba(8, 12, 20, 0.15)",
+        "purpose": "Focused window depth, paired with an accent-mixed border."
+      },
+      {
+        "name": "paper-lift",
+        "value": "0 18px 42px rgba(20, 28, 38, 0.12)",
+        "purpose": "Literal paper-like work surfaces such as the writer page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "arrive-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Decelerating arrival for wallpaper, windows, panels, and dock state."
+      },
+      {
+        "name": "standard-state",
+        "value": "160ms ease",
+        "purpose": "Default color, background, and border state transition."
+      },
+      {
+        "name": "window-enter",
+        "value": "300ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Short translate-and-scale arrival for a newly opened window."
+      },
+      {
+        "name": "panel-enter",
+        "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Launcher, control center, and notification panel arrival."
+      },
+      {
+        "name": "toast-enter",
+        "value": "260ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Right-to-left feedback arrival."
+      },
+      {
+        "name": "boot-sequence",
+        "value": "2700ms total",
+        "purpose": "Boot status exits at 2250ms and completes at 2700ms."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Required replacement duration under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "shell-condensed",
+        "value": "900px"
+      },
+      {
+        "name": "shell-mobile",
+        "value": "720px"
+      },
+      {
+        "name": "shell-compact",
+        "value": "430px"
+      },
+      {
+        "name": "shell-short-landscape",
+        "value": "max-width: 900px and max-height: 520px"
+      },
+      {
+        "name": "app-container-stacked",
+        "value": "700px"
+      },
+      {
+        "name": "app-container-condensed",
+        "value": "590px"
+      },
+      {
+        "name": "app-container-compact",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Compact accent action for the single strongest command in an app region.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">保存更改</button>",
+      "css": ".ds-btn-primary { min-height: 34px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 7px 13px; border: 1px solid color-mix(in srgb, #4f8cff 78%, #000); border-radius: 6px; background: #4f8cff; color: #fff; font: 650 11px/1.2 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; transition: background 160ms ease, border-color 160ms ease, transform 160ms ease; cursor: pointer; } .ds-btn-primary:hover { background: color-mix(in srgb, #4f8cff 88%, #000); } .ds-btn-primary:focus-visible { outline: 2px solid color-mix(in srgb, #4f8cff 88%, white); outline-offset: 2px; } .ds-btn-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Neutral surface action for ordinary commands beside a primary action.",
+      "html": "<button class=\"ds-btn-text\" type=\"button\">查看全部</button>",
+      "css": ".ds-btn-text { min-height: 34px; display: inline-flex; align-items: center; justify-content: center; padding: 7px 13px; border: 1px solid rgba(231, 237, 246, 0.18); border-radius: 6px; background: #20242b; color: #edf0f5; font: 650 11px/1.2 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; transition: background 160ms ease, border-color 160ms ease, transform 160ms ease; cursor: pointer; } .ds-btn-text:hover { background: #292e37; border-color: color-mix(in srgb, #4f8cff 36%, rgba(231, 237, 246, 0.18)); } .ds-btn-text:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-btn-text:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Stable square control for familiar toolbar and window commands.",
+      "html": "<button class=\"ds-icon-button\" type=\"button\" aria-label=\"搜索\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><path d=\"m21 21-4.3-4.3\"></path></svg></button>",
+      "css": ".ds-icon-button { width: 32px; height: 32px; display: inline-grid; place-items: center; padding: 0; border: 1px solid transparent; border-radius: 6px; background: transparent; color: #a3acba; transition: color 160ms ease, background 160ms ease, border-color 160ms ease, transform 160ms ease; cursor: pointer; } .ds-icon-button:hover { color: #edf0f5; background: #292e37; border-color: rgba(231, 237, 246, 0.10); } .ds-icon-button:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-icon-button:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Icon-led compact search used by the launcher and app toolbars.",
+      "html": "<label class=\"ds-search-field\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><path d=\"m21 21-4.3-4.3\"></path></svg><input aria-label=\"搜索\" placeholder=\"搜索应用和文档\" /></label>",
+      "css": ".ds-search-field { width: 280px; min-height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 9px; border: 1px solid rgba(231, 237, 246, 0.10); border-radius: 6px; background: #20242b; color: #a3acba; transition: border-color 160ms ease, box-shadow 160ms ease; } .ds-search-field:hover { border-color: rgba(231, 237, 246, 0.18); } .ds-search-field:focus-within { border-color: color-mix(in srgb, #4f8cff 50%, rgba(231, 237, 246, 0.10)); box-shadow: 0 0 0 2px color-mix(in srgb, #4f8cff 13%, transparent); } .ds-search-field input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: #edf0f5; font: 400 13px/1.5 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; } .ds-search-field input::placeholder { color: #798392; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "button",
+      "refersTo": "segmented-control",
+      "description": "Bounded icon mode switch for mutually exclusive app views.",
+      "html": "<div class=\"ds-segmented\" role=\"group\" aria-label=\"视图\"><button class=\"ds-segmented-button ds-is-active\" type=\"button\" aria-pressed=\"true\" aria-label=\"网格视图\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"></rect><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"></rect><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"></rect><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"></rect></svg></button><button class=\"ds-segmented-button\" type=\"button\" aria-pressed=\"false\" aria-label=\"列表视图\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M8 6h13M8 12h13M8 18h13\"></path><path d=\"M3 6h.01M3 12h.01M3 18h.01\"></path></svg></button></div>",
+      "css": ".ds-segmented { display: inline-flex; gap: 1px; padding: 2px; border: 1px solid rgba(231, 237, 246, 0.10); border-radius: 7px; background: #20242b; } .ds-segmented-button { width: 28px; height: 26px; display: inline-grid; place-items: center; padding: 0; border: 1px solid transparent; border-radius: 5px; background: transparent; color: #a3acba; cursor: pointer; } .ds-segmented-button:hover { color: #edf0f5; background: #292e37; } .ds-segmented-button.ds-is-active { color: #4f8cff; background: color-mix(in srgb, #4f8cff 13%, transparent); border-color: color-mix(in srgb, #4f8cff 32%, transparent); } .ds-segmented-button:focus-visible { outline: 2px solid #4f8cff; outline-offset: 1px; } .ds-segmented-button:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Window Frame",
+      "kind": "custom",
+      "refersTo": "window-frame",
+      "description": "Signature floating work surface with app identity and explicit window controls.",
+      "html": "<section class=\"ds-window\"><header class=\"ds-window-titlebar\"><div class=\"ds-window-identity\"><span class=\"ds-window-app-icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18\"></path></svg></span><strong>浏览器</strong><small>BR · 01</small></div><div class=\"ds-window-controls\"><button aria-label=\"最小化\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14\"></path></svg></button><button aria-label=\"最大化\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\"></rect></svg></button><button class=\"ds-window-close\" aria-label=\"关闭\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m6 6 12 12M18 6 6 18\"></path></svg></button></div></header><div class=\"ds-window-content\"><strong>当前工作区</strong><span>应用内容保持清晰、平整，并在窗口内部响应。</span></div></section>",
+      "css": ".ds-window { width: 430px; overflow: hidden; border: 1px solid color-mix(in srgb, #3f7df0 34%, rgba(232, 240, 250, 0.16)); border-radius: 8px; background: rgba(20, 24, 31, 0.94); color: #f4f7fb; box-shadow: 0 28px 90px rgba(8, 12, 20, 0.30), 0 7px 20px rgba(8, 12, 20, 0.15); } .ds-window-titlebar { height: 42px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 5px 0 12px; border-bottom: 1px solid rgba(232, 240, 250, 0.12); background: rgba(29, 34, 42, 0.78); } .ds-window-identity { min-width: 0; display: flex; align-items: center; gap: 8px; } .ds-window-app-icon { width: 24px; height: 24px; display: inline-grid; place-items: center; border: 1px solid color-mix(in srgb, #3f7df0 34%, transparent); border-radius: 6px; background: color-mix(in srgb, #3f7df0 12%, transparent); color: #3f7df0; } .ds-window-identity strong { overflow: hidden; font: 620 12.5px/1 \"Segoe UI Variable\", \"PingFang SC\", sans-serif; text-overflow: ellipsis; white-space: nowrap; } .ds-window-identity small { color: color-mix(in srgb, #3f7df0 72%, #aab3c0); font: 650 8.5px/1 \"Segoe UI Variable\", sans-serif; } .ds-window-controls { display: flex; gap: 2px; } .ds-window-controls button { width: 32px; height: 28px; display: inline-grid; place-items: center; padding: 0; border: 0; border-radius: 5px; background: transparent; color: #aab3c0; cursor: pointer; } .ds-window-controls button:hover { background: rgba(255, 255, 255, 0.09); color: #f4f7fb; } .ds-window-controls button:focus-visible { outline: 2px solid #4f8cff; outline-offset: -2px; } .ds-window-controls button:active { transform: scale(0.92); } .ds-window-controls .ds-window-close:hover { background: #dc3545; color: #fff; } .ds-window-content { min-height: 150px; display: grid; place-content: center; gap: 7px; padding: 24px; background: #171a20; color: #a3acba; text-align: center; font: 400 13px/1.5 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; } .ds-window-content strong { color: #edf0f5; }"
+    },
+    {
+      "name": "Dock",
+      "kind": "nav",
+      "refersTo": "dock",
+      "description": "Floating task switcher with stable hit areas and distinct running versus active state.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"程序坞\"><button class=\"ds-dock-button\" aria-label=\"应用启动器\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"6\" height=\"6\"></rect><rect x=\"15\" y=\"3\" width=\"6\" height=\"6\"></rect><rect x=\"3\" y=\"15\" width=\"6\" height=\"6\"></rect><rect x=\"15\" y=\"15\" width=\"6\" height=\"6\"></rect></svg></button><span class=\"ds-dock-rule\"></span><button class=\"ds-dock-button ds-is-running ds-is-active\" aria-label=\"浏览器\"><span class=\"ds-dock-icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18\"></path></svg></span><span class=\"ds-dock-state\"></span></button><button class=\"ds-dock-button ds-is-running\" aria-label=\"文件\"><span class=\"ds-dock-icon ds-dock-icon-files\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 6h6l2 2h10v11H3z\"></path></svg></span><span class=\"ds-dock-state\"></span></button></nav>",
+      "css": ".ds-dock { height: 58px; display: inline-flex; align-items: center; gap: 4px; padding: 6px; border: 1px solid rgba(234, 242, 250, 0.18); border-radius: 8px; background: rgba(11, 16, 22, 0.70); box-shadow: 0 18px 52px rgba(2, 5, 9, 0.30), 0 3px 10px rgba(2, 5, 9, 0.16); color: #f4f7fb; } .ds-dock-button { position: relative; width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 7px; background: transparent; color: inherit; transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease; cursor: pointer; } .ds-dock-button:hover, .ds-dock-button.ds-is-active { background: rgba(255, 255, 255, 0.10); transform: translateY(-3px); } .ds-dock-button:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-dock-icon { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid color-mix(in srgb, #3f7df0 44%, rgba(255, 255, 255, 0.20)); border-radius: 7px; background: linear-gradient(145deg, color-mix(in srgb, #3f7df0 76%, white 12%), color-mix(in srgb, #3f7df0 70%, #111b28)); color: #fff; } .ds-dock-icon-files { border-color: color-mix(in srgb, #4d82bf 44%, rgba(255, 255, 255, 0.20)); background: linear-gradient(145deg, color-mix(in srgb, #4d82bf 76%, white 12%), color-mix(in srgb, #4d82bf 70%, #111b28)); } .ds-dock-rule { width: 1px; height: 28px; margin: 0 3px; background: rgba(229, 239, 251, 0.16); } .ds-dock-state { position: absolute; bottom: 1px; left: 50%; width: 3px; height: 3px; transform: translateX(-50%); border-radius: 50%; background: rgba(238, 246, 252, 0.62); } .ds-dock-button.ds-is-active .ds-dock-state { width: 16px; border-radius: 2px; background: #4f8cff; box-shadow: 0 1px 5px color-mix(in srgb, #4f8cff 52%, transparent); }"
+    },
+    {
+      "name": "Toggle Tile",
+      "kind": "button",
+      "refersTo": "toggle-tile-on",
+      "description": "Control-center binary setting with icon well, text state, and pressed semantics.",
+      "html": "<button class=\"ds-toggle-tile ds-is-on\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-toggle-icon\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01\"></path></svg></span><span class=\"ds-toggle-copy\"><strong>无线网络</strong><small>Aster Studio</small></span></button>",
+      "css": ".ds-toggle-tile { min-width: 164px; min-height: 58px; display: grid; grid-template-columns: 32px 1fr; align-items: center; gap: 9px; padding: 8px; border: 1px solid rgba(229, 239, 251, 0.16); border-radius: 7px; background: rgba(255, 255, 255, 0.045); color: #f4f7fb; text-align: left; cursor: pointer; } .ds-toggle-tile:hover { background: rgba(255, 255, 255, 0.08); } .ds-toggle-tile:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-toggle-tile.ds-is-on { border-color: color-mix(in srgb, #4f8cff 45%, rgba(229, 239, 251, 0.16)); background: color-mix(in srgb, #4f8cff 20%, transparent); } .ds-toggle-icon { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 6px; background: #4f8cff; color: #fff; } .ds-toggle-copy { min-width: 0; display: grid; gap: 3px; } .ds-toggle-copy strong, .ds-toggle-copy small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .ds-toggle-copy strong { font: 610 11px/1.2 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; } .ds-toggle-copy small { color: rgba(238, 244, 251, 0.48); font: 400 9.5px/1.2 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; }"
+    },
+    {
+      "name": "Selected List Item",
+      "kind": "card",
+      "refersTo": "list-item-selected",
+      "description": "Dense selected row using a narrow accent rail, surface shift, and text hierarchy.",
+      "html": "<button class=\"ds-list-item ds-is-selected\" type=\"button\"><strong>Aster 产品构想</strong><time>刚刚</time><span>桌面系统的交互与设计记录</span></button>",
+      "css": ".ds-list-item { position: relative; width: 280px; min-height: 75px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 8px; padding: 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: #a3acba; text-align: left; cursor: pointer; } .ds-list-item:hover { background: color-mix(in srgb, #20242b 72%, transparent); } .ds-list-item:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-list-item.ds-is-selected { background: #20242b; border-color: rgba(231, 237, 246, 0.10); box-shadow: 0 4px 12px rgba(23, 29, 38, 0.06); } .ds-list-item.ds-is-selected::before { position: absolute; top: 13px; bottom: 13px; left: -1px; width: 2px; border-radius: 0 2px 2px 0; background: #4f8cff; content: \"\"; } .ds-list-item strong { min-width: 0; overflow: hidden; color: #edf0f5; font: 600 13px/1.3 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; text-overflow: ellipsis; white-space: nowrap; } .ds-list-item time { color: #798392; font: 400 10px/1.3 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; } .ds-list-item span { grid-column: 1 / -1; min-width: 0; overflow: hidden; font: 400 11px/1.3 \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; text-overflow: ellipsis; white-space: nowrap; }"
+    },
+    {
+      "name": "System Panel",
+      "kind": "custom",
+      "refersTo": "system-panel",
+      "description": "Translucent shell-level panel for control, notification, and launcher content.",
+      "html": "<section class=\"ds-system-panel\"><header><strong>控制中心</strong><button aria-label=\"打开系统设置\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3\"></path><path d=\"M1 14h6M9 8h6M17 16h6\"></path></svg></button></header><div class=\"ds-system-row\"><span><strong>外观</strong><small>深色</small></span><span class=\"ds-system-status\">已开启</span></div></section>",
+      "css": ".ds-system-panel { width: 328px; padding: 16px; border: 1px solid rgba(229, 239, 251, 0.16); border-radius: 8px; background: rgba(16, 21, 28, 0.82); box-shadow: 0 28px 80px rgba(3, 7, 12, 0.34), 0 5px 18px rgba(3, 7, 12, 0.18); color: #f4f7fb; font-family: \"Segoe UI Variable Text\", \"PingFang SC\", sans-serif; } .ds-system-panel header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; } .ds-system-panel header strong { font-size: 13px; } .ds-system-panel header button { width: 30px; height: 30px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; } .ds-system-panel header button:hover { background: rgba(255, 255, 255, 0.08); } .ds-system-panel header button:focus-visible { outline: 2px solid #4f8cff; outline-offset: 2px; } .ds-system-row { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 10px; border: 1px solid rgba(229, 239, 251, 0.16); border-radius: 7px; background: rgba(255, 255, 255, 0.045); } .ds-system-row > span:first-child { display: grid; gap: 3px; } .ds-system-row strong { font-size: 11px; } .ds-system-row small { color: rgba(238, 244, 251, 0.48); font-size: 9.5px; } .ds-system-status { color: color-mix(in srgb, #4f8cff 70%, white); font-size: 10px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Photographic Light Table",
+    "overview": "Aster OS treats the browser viewport as a photographic light table: a graphite field illuminated by an authored blue, coral, and lime wallpaper, with compact chrome and translucent film-like surfaces layered above it. The shell should feel composed and atmospheric without becoming decorative software theater; the user's task remains the brightest, sharpest object on screen.\n\nThe shell and the apps intentionally use two material regimes. Top-level chrome, launchers, notifications, the dock, and floating windows use dark glass with crisp one-pixel rules. App interiors use quieter productivity surfaces - paper, canvas, sidebars, toolbars, and status bars - in coordinated light and dark themes. A single configurable accent connects focus, selection, active navigation, and primary actions across both regimes.\n\nInteraction is part of the identity. Booting, opening, focusing, dragging, resizing, minimizing, restoring, searching, saving, locking, and returning to work form one continuous environment. Responsive behavior preserves that continuity by switching from overlapping windows to a full-workspace task model instead of shrinking a desktop composition beyond usability.",
+    "keyCharacteristics": [
+      "Graphite glass shell over an authored cobalt, coral, and lime photographic field.",
+      "Dense productivity surfaces with crisp one-pixel rules and restrained 4-8px corners.",
+      "One configurable accent for focus and action, plus bounded app identity colors.",
+      "Direct manipulation, persistent local work, and explicit system state.",
+      "Brief, decelerating motion that yields immediately to reduced-motion preferences."
+    ],
+    "rules": [
+      {
+        "name": "The Accent Discipline Rule",
+        "body": "Accent color marks focus, selection, progress, and primary action; it does not flood whole toolbars or routine containers.",
+        "section": "colors"
+      },
+      {
+        "name": "The Identity Color Rule",
+        "body": "App identity colors identify an app at its icon and window boundary; shared controls continue to use the current system accent and semantic status colors.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Type Rule",
+        "body": "Do not use oversized marketing typography, negative tracking, or multiple display families; this is an operating environment, and type should clarify state rather than perform branding by itself.",
+        "section": "typography"
+      },
+      {
+        "name": "The Workspace First Rule",
+        "body": "Reserve the topbar and dock before sizing windows; app content may scroll internally, but it must not disappear under shell chrome.",
+        "section": "layout"
+      },
+      {
+        "name": "The Container Owns Adaptation Rule",
+        "body": "Responsive app behavior follows the window's inline size, because a narrow floating window on desktop must receive the same layout care as a narrow device.",
+        "section": "layout"
+      },
+      {
+        "name": "The Glass Outside, Paper Inside Rule",
+        "body": "Backdrop blur belongs to shell chrome and window boundaries; app canvases remain crisp enough for repeated work and reading.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Active Plane Rule",
+        "body": "Only the current window receives the strongest shadow and accent border. Do not give every visible surface equal elevation.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Eight Pixel Ceiling Rule",
+        "body": "Routine rectangles stay at or below 8px radius; larger soft cards would weaken the crisp desktop character.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Circle Reservation Rule",
+        "body": "Use circles for identity, status, a bounded value, or a physical control - never as ambient decoration.",
+        "section": "shapes"
+      },
+      {
+        "name": "The State Must Read Rule",
+        "body": "Hover, focus, active, selected, running, saving, error, disabled, and locked states each require a distinct non-color cue or explicit text.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do route shared focus, selection, and primary actions through the current accent variable so theme and accent settings remain live.",
+      "Do preserve the shell/app material split: atmospheric glass for operating-system chrome, crisp tonal surfaces for sustained work.",
+      "Do keep routine spacing on the established 4, 6, 8, 10, 12, 16, 22, and 28px rhythm and routine corners within 4-8px.",
+      "Do test both themes, every accent option, keyboard shortcuts, lock focus, reduced motion, 320px minimum width, 430/720/900px viewport changes, 480/590/700px container changes, and short landscape at 900x520px.",
+      "Do verify that the 36px topbar, mobile/fullscreen window area, and 58px dock never overlap essential controls or scrolling content.",
+      "Do preserve Simplified Chinese text fit with ellipsis, wrapping, or flexible grid tracks; never let labels resize stable controls."
+    ],
+    "donts": [
+      "Don't turn the desktop into a landing page, a grid of oversized app cards, or a collection of nested floating cards.",
+      "Don't use blur and large shadows inside ordinary app content; reserve them for shell chrome, windows, and floating feedback.",
+      "Don't introduce radii above 8px for routine rectangles, decorative gradient blobs, negative letter spacing, or a second competing global accent.",
+      "Don't remove text labels, ARIA state, focus rings, reduced-motion fallbacks, or 44px compact targets to gain visual density.",
+      "Don't hard-code the default cobalt inside shared components or repurpose app identity colors as success, warning, or danger semantics.",
+      "Don't add an app without checking its minimum window size, narrow container layout, mobile full-workspace behavior, theme contrast, empty/error states, and dock/launcher identity."
+    ]
+  }
+}
+
