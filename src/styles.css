@@ -1,0 +1,1594 @@
+:root {
+  font-family: "Segoe UI Variable", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #f4f7fb;
+  background: #0b0f14;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+button {
+  border: 0;
+}
+
+button,
+input[type="range"] {
+  accent-color: var(--accent, #4f8cff);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[contenteditable="true"]:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent, #4f8cff) 88%, white);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent, #4f8cff) 48%, transparent);
+}
+
+.aster-os {
+  --accent: #4f8cff;
+  --shell-text: #f4f7fb;
+  --shell-muted: rgba(238, 244, 251, 0.7);
+  --shell-faint: rgba(238, 244, 251, 0.48);
+  --shell-panel: rgba(16, 21, 28, 0.82);
+  --shell-panel-strong: rgba(17, 22, 29, 0.94);
+  --shell-border: rgba(229, 239, 251, 0.16);
+  --aster-window-surface: rgba(20, 24, 31, 0.94);
+  --aster-window-titlebar: rgba(29, 34, 42, 0.78);
+  --aster-window-border: rgba(232, 240, 250, 0.16);
+  --aster-text: #f4f6f9;
+  --aster-text-muted: #aab3c0;
+  --aster-control-hover: rgba(255, 255, 255, 0.09);
+  --aster-focus-ring: var(--accent);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  background: #090d12;
+  color: var(--shell-text);
+  isolation: isolate;
+}
+
+.aster-os.theme-light {
+  --shell-text: #18202a;
+  --shell-muted: rgba(20, 28, 38, 0.7);
+  --shell-faint: rgba(20, 28, 38, 0.48);
+  --shell-panel: rgba(239, 244, 249, 0.86);
+  --shell-panel-strong: rgba(249, 251, 253, 0.96);
+  --shell-border: rgba(20, 29, 40, 0.16);
+  --aster-window-surface: rgba(246, 248, 251, 0.94);
+  --aster-window-titlebar: rgba(252, 253, 254, 0.78);
+  --aster-window-border: rgba(25, 32, 42, 0.17);
+  --aster-text: #171d25;
+  --aster-text-muted: #667080;
+  --aster-control-hover: rgba(20, 28, 38, 0.08);
+}
+
+.wallpaper,
+.wallpaper-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.wallpaper {
+  z-index: -3;
+  background: #10171e url('/aster-wallpaper.svg') center / cover no-repeat;
+  transform: scale(1.015);
+  animation: wallpaper-arrive 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.wallpaper-shade {
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(2, 5, 8, 0.12), rgba(2, 5, 8, 0.04) 42%, rgba(2, 5, 8, 0.34));
+  box-shadow: inset 0 0 0 100vmax rgb(0 0 0 / var(--screen-dim, 0));
+  pointer-events: none;
+}
+
+.theme-light .wallpaper {
+  filter: brightness(1.12) saturate(0.82);
+}
+
+.theme-light .wallpaper-shade {
+  background: rgba(238, 245, 250, 0.18);
+}
+
+.topbar {
+  position: absolute;
+  z-index: 9000;
+  inset: 0 0 auto;
+  display: grid;
+  height: 36px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(236, 244, 251, 0.12);
+  background: rgba(8, 12, 17, 0.64);
+  box-shadow: 0 5px 18px rgba(4, 7, 11, 0.12);
+  backdrop-filter: blur(22px) saturate(1.22);
+  -webkit-backdrop-filter: blur(22px) saturate(1.22);
+}
+
+.theme-light .topbar {
+  border-bottom-color: rgba(15, 24, 34, 0.12);
+  background: rgba(244, 248, 251, 0.72);
+  box-shadow: 0 5px 18px rgba(20, 28, 38, 0.08);
+}
+
+.topbar button {
+  color: var(--shell-text);
+}
+
+.topbar-brand,
+.status-button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  background: transparent;
+  cursor: default;
+}
+
+.topbar-brand:hover,
+.topbar-brand.is-active,
+.status-button:hover,
+.status-button.is-active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-light .topbar-brand:hover,
+.theme-light .topbar-brand.is-active,
+.theme-light .status-button:hover,
+.theme-light .status-button.is-active {
+  background: rgba(20, 29, 40, 0.08);
+}
+
+.topbar-brand {
+  justify-self: start;
+  height: 28px;
+  gap: 7px;
+  padding: 0 9px 0 7px;
+}
+
+.topbar-brand strong {
+  font-size: 11px;
+  font-weight: 720;
+}
+
+.aster-mark {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  transform: rotate(30deg);
+}
+
+.aster-mark i {
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 15px;
+  height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.aster-mark i:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.aster-mark i:nth-child(3) {
+  transform: rotate(120deg);
+}
+
+.aster-mark--small {
+  color: #9fc1ff;
+}
+
+.topbar-active {
+  max-width: 220px;
+  overflow: hidden;
+  color: var(--shell-muted);
+  font-size: 12px;
+  font-weight: 560;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-status {
+  display: flex;
+  justify-self: end;
+  align-items: center;
+  gap: 2px;
+}
+
+.status-button {
+  position: relative;
+  min-width: 30px;
+  height: 28px;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 7px;
+}
+
+.status-cluster {
+  min-width: 72px;
+  gap: 7px;
+}
+
+.status-time {
+  min-width: 45px;
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid rgba(7, 11, 16, 0.8);
+  border-radius: 50%;
+  background: #ff7567;
+}
+
+.desktop {
+  position: absolute;
+  z-index: 0;
+  inset: 36px 0 0;
+  overflow: hidden;
+}
+
+.desktop-shortcuts {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 18px;
+  display: grid;
+  width: 84px;
+  grid-auto-rows: 82px;
+  gap: 5px;
+}
+
+.desktop-shortcut {
+  display: grid;
+  width: 84px;
+  height: 82px;
+  grid-template-rows: 52px auto;
+  justify-items: center;
+  align-items: center;
+  padding: 4px 3px 5px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #f8fbff;
+  cursor: default;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.72);
+}
+
+.desktop-shortcut:hover,
+.desktop-shortcut:focus {
+  border-color: rgba(230, 241, 251, 0.17);
+  background: rgba(239, 247, 253, 0.1);
+}
+
+.desktop-shortcut > span:last-child {
+  max-width: 80px;
+  overflow: hidden;
+  font-size: 11.5px;
+  line-height: 1.2;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-icon {
+  --app-color: #4f8cff;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--app-color) 44%, rgba(255, 255, 255, 0.2));
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--app-color) 76%, white 12%), color-mix(in srgb, var(--app-color) 70%, #111b28));
+  box-shadow:
+    0 8px 18px color-mix(in srgb, var(--app-color) 22%, transparent),
+    inset 0 1px rgba(255, 255, 255, 0.24);
+  color: white;
+}
+
+.app-icon--desktop {
+  width: 48px;
+  height: 48px;
+}
+
+.app-icon--dock {
+  width: 38px;
+  height: 38px;
+  border-radius: 7px;
+}
+
+.app-icon--launcher {
+  width: 42px;
+  height: 42px;
+}
+
+.desktop-glance {
+  position: absolute;
+  z-index: 1;
+  top: 42px;
+  right: 34px;
+  display: grid;
+  width: 280px;
+  justify-items: end;
+  color: #f8fbff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.contact-sheet {
+  position: absolute;
+  z-index: 1;
+  right: 34px;
+  bottom: 104px;
+  display: grid;
+  width: 348px;
+  height: 116px;
+  grid-template-rows: 14px 1fr 14px;
+  padding: 5px 7px 18px;
+  transform: rotate(-1.6deg);
+  border: 1px solid rgba(224, 235, 241, 0.22);
+  border-radius: 4px;
+  background: rgba(7, 10, 14, 0.52);
+  box-shadow: 0 18px 46px rgba(2, 5, 8, 0.24), 0 3px 10px rgba(2, 5, 8, 0.18);
+  opacity: 0.72;
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.contact-sheet__edge {
+  background:
+    repeating-linear-gradient(90deg, rgba(226, 237, 243, 0.55) 0 8px, transparent 8px 18px);
+  mask: linear-gradient(#000 0 0) center / 100% 5px no-repeat;
+}
+
+.contact-sheet__edge--bottom {
+  align-self: end;
+}
+
+.contact-sheet__frames {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.contact-sheet__frame {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(231, 240, 246, 0.25);
+  border-radius: 2px;
+  background-image: url('/aster-wallpaper.svg');
+  background-repeat: no-repeat;
+  background-size: 680px 382px;
+  box-shadow: inset 0 0 18px rgba(3, 6, 9, 0.28);
+}
+
+.contact-sheet__frame--one { background-position: 4% 54%; }
+.contact-sheet__frame--two { background-position: 36% 48%; }
+.contact-sheet__frame--three { background-position: 68% 62%; }
+.contact-sheet__frame--four { background-position: 96% 46%; }
+
+.contact-sheet > span {
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+  color: rgba(230, 239, 244, 0.6);
+  font-size: 8px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.desktop-clock {
+  display: grid;
+  justify-items: end;
+}
+
+.desktop-clock__time {
+  font-size: clamp(42px, 5.3vw, 68px);
+  font-weight: 270;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.98;
+}
+
+.desktop-clock__date {
+  margin-top: 8px;
+  color: rgba(244, 249, 253, 0.76);
+  font-size: 13px;
+  font-weight: 540;
+}
+
+.glance-weather {
+  display: grid;
+  width: 198px;
+  height: 54px;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  padding: 7px 10px;
+  border: 1px solid rgba(238, 246, 252, 0.16);
+  border-radius: 7px;
+  background: rgba(10, 15, 21, 0.36);
+  color: #f7fbff;
+  text-align: left;
+  backdrop-filter: blur(14px);
+  cursor: default;
+}
+
+.glance-weather:hover {
+  background: rgba(18, 25, 33, 0.52);
+}
+
+.glance-weather span {
+  display: grid;
+}
+
+.glance-weather strong {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.glance-weather small {
+  margin-top: 4px;
+  color: rgba(242, 248, 252, 0.66);
+  font-size: 10.5px;
+}
+
+.glance-agenda {
+  display: grid;
+  width: 248px;
+  grid-template-columns: 2px 1fr;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 10px 12px 10px 10px;
+  border-radius: 6px;
+  background: rgba(8, 12, 17, 0.26);
+  backdrop-filter: blur(12px);
+}
+
+.agenda-rail {
+  border-radius: 1px;
+  background: #ff7567;
+}
+
+.glance-agenda div {
+  display: grid;
+  gap: 3px;
+}
+
+.glance-agenda small,
+.glance-agenda span {
+  color: rgba(242, 248, 252, 0.67);
+  font-size: 10.5px;
+}
+
+.glance-agenda strong {
+  font-size: 12px;
+}
+
+.window-layer {
+  position: absolute;
+  z-index: 10;
+  inset: 0 0 70px;
+  pointer-events: none;
+}
+
+.window-layer > * {
+  pointer-events: auto;
+}
+
+.dock {
+  position: absolute;
+  z-index: 9200;
+  bottom: 12px;
+  left: 50%;
+  display: flex;
+  height: 58px;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(234, 242, 250, 0.18);
+  border-radius: 8px;
+  background: rgba(11, 16, 22, 0.7);
+  box-shadow: 0 18px 52px rgba(2, 5, 9, 0.3), 0 3px 10px rgba(2, 5, 9, 0.16);
+  backdrop-filter: blur(24px) saturate(1.24);
+  -webkit-backdrop-filter: blur(24px) saturate(1.24);
+}
+
+.theme-light .dock {
+  border-color: rgba(18, 27, 38, 0.15);
+  background: rgba(245, 248, 251, 0.78);
+  box-shadow: 0 18px 52px rgba(20, 28, 38, 0.16), 0 3px 10px rgba(20, 28, 38, 0.08);
+}
+
+.dock--compact {
+  height: 50px;
+}
+
+.dock-button {
+  position: relative;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--shell-text);
+  cursor: default;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms ease;
+}
+
+.dock-button:hover,
+.dock-button.is-active {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.theme-light .dock-button:hover,
+.theme-light .dock-button.is-active {
+  background: rgba(20, 29, 40, 0.08);
+}
+
+.dock-launcher {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+  color: color-mix(in srgb, var(--accent) 70%, white);
+}
+
+.dock-separator {
+  width: 1px;
+  height: 28px;
+  margin: 0 3px;
+  background: var(--shell-border);
+}
+
+.dock-running-dot {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: transparent;
+}
+
+.dock-button.is-running .dock-running-dot {
+  background: rgba(238, 246, 252, 0.62);
+}
+
+.dock-button.is-active .dock-running-dot {
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 1px 5px color-mix(in srgb, var(--accent) 52%, transparent);
+}
+
+.dock-button--utility {
+  color: var(--shell-muted);
+}
+
+.dock-notification-badge {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  display: grid;
+  min-width: 14px;
+  height: 14px;
+  place-items: center;
+  border: 1px solid rgba(8, 12, 17, 0.9);
+  border-radius: 7px;
+  background: #ff6f63;
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.system-panel {
+  position: absolute;
+  z-index: 9500;
+  border: 1px solid var(--shell-border);
+  border-radius: 8px;
+  background: var(--shell-panel);
+  box-shadow: 0 28px 80px rgba(3, 7, 12, 0.34), 0 5px 18px rgba(3, 7, 12, 0.18);
+  color: var(--shell-text);
+  backdrop-filter: blur(30px) saturate(1.2);
+  -webkit-backdrop-filter: blur(30px) saturate(1.2);
+  animation: panel-in 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.system-panel button {
+  color: inherit;
+}
+
+.launcher-panel {
+  bottom: 80px;
+  left: 50%;
+  width: min(620px, calc(100vw - 32px));
+  max-height: min(680px, calc(100vh - 126px));
+  padding: 22px;
+  transform: translateX(-50%);
+  overflow: auto;
+  transform-origin: 50% 100%;
+}
+
+.launcher-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.launcher-head > div {
+  display: grid;
+  gap: 4px;
+}
+
+.launcher-greeting {
+  color: var(--shell-muted);
+  font-size: 11.5px;
+}
+
+.launcher-head strong {
+  font-size: 18px;
+  font-weight: 630;
+}
+
+.avatar-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e8ad5a;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  color: #17110a !important;
+  font-weight: 680;
+  cursor: default;
+}
+
+.launcher-search {
+  display: grid;
+  height: 42px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 0 11px;
+  border: 1px solid var(--shell-border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--shell-muted);
+}
+
+.theme-light .launcher-search {
+  background: rgba(20, 29, 40, 0.05);
+}
+
+.launcher-search:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--shell-border));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.launcher-search input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--shell-text);
+  font-size: 13px;
+}
+
+.launcher-search input::placeholder {
+  color: var(--shell-faint);
+}
+
+kbd {
+  padding: 3px 5px;
+  border: 1px solid var(--shell-border);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--shell-faint);
+  font-family: inherit;
+  font-size: 9px;
+}
+
+.launcher-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.launcher-section-head strong {
+  font-size: 12px;
+  font-weight: 640;
+}
+
+.launcher-section-head > span,
+.launcher-section-head button {
+  background: transparent;
+  color: var(--shell-faint);
+  font-size: 10.5px;
+}
+
+.launcher-section-head button:hover {
+  color: var(--shell-text);
+}
+
+.launcher-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.launcher-app {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  gap: 9px;
+  padding: 8px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--shell-text);
+  text-align: left;
+  cursor: default;
+}
+
+.launcher-app:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-light .launcher-app:hover {
+  background: rgba(20, 29, 40, 0.06);
+}
+
+.launcher-app > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.launcher-app strong,
+.launcher-app small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.launcher-app strong {
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.launcher-app small {
+  color: var(--shell-faint);
+  font-size: 9.5px;
+}
+
+.launcher-recents {
+  padding-top: 2px;
+}
+
+.recent-file {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--shell-text);
+  text-align: left;
+}
+
+.recent-file:hover {
+  background: rgba(255, 255, 255, 0.085);
+}
+
+.recent-file__mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 6px;
+  background: #326ed6;
+  color: white;
+  font-size: 11px;
+  font-weight: 740;
+}
+
+.recent-file__mark--note {
+  background: #e6aa42;
+  color: #211a0b;
+}
+
+.recent-file > span:nth-child(2) {
+  display: grid;
+  gap: 2px;
+}
+
+.recent-file strong {
+  font-size: 11.5px;
+  font-weight: 590;
+}
+
+.recent-file small {
+  color: var(--shell-faint);
+  font-size: 9.5px;
+}
+
+.launcher-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px -22px -22px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--shell-border);
+  background: rgba(0, 0, 0, 0.09);
+  color: var(--shell-muted);
+  font-size: 10.5px;
+}
+
+.launcher-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.presence-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9edc55;
+  box-shadow: 0 0 0 3px rgba(158, 220, 85, 0.12);
+}
+
+.launcher-footer div {
+  display: flex;
+  gap: 3px;
+}
+
+.launcher-footer button,
+.control-topline button,
+.notification-head button {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.launcher-footer button:hover,
+.control-topline button:hover,
+.notification-head button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.control-panel,
+.notification-panel {
+  top: 44px;
+  right: 10px;
+  width: min(360px, calc(100vw - 20px));
+  padding: 16px;
+  transform-origin: 100% 0;
+}
+
+.control-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.control-topline strong {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.toggle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.toggle-grid > button {
+  display: grid;
+  min-width: 0;
+  min-height: 58px;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 9px;
+  padding: 8px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.045);
+  text-align: left;
+}
+
+.toggle-grid > button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-grid > button.is-on {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--shell-border));
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.toggle-grid > button > span:first-child {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-grid > button.is-on > span:first-child {
+  background: var(--accent);
+  color: white;
+}
+
+.toggle-grid > button > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.toggle-grid strong,
+.toggle-grid small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toggle-grid strong {
+  font-size: 11px;
+  font-weight: 610;
+}
+
+.toggle-grid small {
+  color: var(--shell-faint);
+  font-size: 9.5px;
+}
+
+.control-slider {
+  display: grid;
+  height: 42px;
+  grid-template-columns: 22px 1fr 34px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 9px;
+  padding: 0 10px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--shell-muted);
+}
+
+.control-slider input {
+  width: 100%;
+}
+
+.control-slider > span {
+  font-size: 9px;
+  text-align: right;
+}
+
+.now-playing {
+  display: grid;
+  grid-template-columns: 42px 1fr 34px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.album-mini {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #172332;
+}
+
+.album-mini i {
+  position: absolute;
+  width: 60px;
+  height: 7px;
+  transform: rotate(-34deg);
+  border-radius: 4px;
+  background: #5e8cff;
+}
+
+.album-mini i:nth-child(1) { top: 7px; left: -15px; }
+.album-mini i:nth-child(2) { top: 19px; left: -5px; background: #ff776b; }
+.album-mini i:nth-child(3) { top: 31px; left: 5px; background: #b9ec61; }
+
+.now-playing > span:nth-child(2) {
+  display: grid;
+  gap: 3px;
+}
+
+.now-playing strong { font-size: 11px; }
+.now-playing small { color: var(--shell-faint); font-size: 9.5px; }
+.now-playing button {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--shell-text);
+  color: var(--shell-panel-strong);
+}
+
+.notification-panel {
+  width: min(380px, calc(100vw - 20px));
+}
+
+.notification-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.notification-head > div {
+  display: grid;
+  gap: 7px;
+}
+
+.notification-head .desktop-clock {
+  justify-items: start;
+}
+
+.notification-head .desktop-clock__time {
+  font-size: 30px;
+  font-weight: 430;
+}
+
+.notification-head .desktop-clock__date {
+  margin-top: 3px;
+  color: var(--shell-muted);
+  font-size: 10px;
+}
+
+.notification-head > div > span {
+  color: var(--shell-faint);
+  font-size: 10.5px;
+}
+
+.notification-list {
+  display: grid;
+  gap: 7px;
+}
+
+.notification-list article {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.notification-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 7px;
+}
+
+.notification-icon--sync {
+  background: rgba(158, 220, 85, 0.18);
+  color: #b9ef73;
+}
+
+.notification-icon--calendar {
+  background: rgba(79, 140, 255, 0.2);
+  color: #91b5ff;
+}
+
+.notification-list article > div {
+  display: grid;
+  gap: 4px;
+}
+
+.notification-list strong { font-size: 11.5px; }
+.notification-list p { margin: 0; color: var(--shell-muted); font-size: 10.5px; line-height: 1.5; }
+.notification-list small { color: var(--shell-faint); font-size: 9px; }
+
+.notification-clear {
+  width: 100%;
+  height: 34px;
+  margin-top: 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--shell-muted) !important;
+  font-size: 10.5px;
+}
+
+.notification-clear:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--shell-text) !important;
+}
+
+.notification-empty {
+  display: grid;
+  min-height: 150px;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--shell-faint);
+}
+
+.notification-empty strong {
+  color: var(--shell-text);
+  font-size: 12px;
+}
+
+.notification-empty span {
+  font-size: 10px;
+}
+
+.desktop-menu {
+  position: fixed;
+  z-index: 9700;
+  display: grid;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: var(--shell-panel-strong);
+  box-shadow: 0 18px 52px rgba(3, 7, 12, 0.34);
+  color: var(--shell-text);
+  backdrop-filter: blur(24px);
+  animation: context-in 140ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.desktop-menu button {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  font-size: 11px;
+  text-align: left;
+}
+
+.desktop-menu button:hover {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.menu-rule {
+  height: 1px;
+  margin: 4px;
+  background: var(--shell-border);
+}
+
+.toast-stack {
+  position: absolute;
+  z-index: 9800;
+  right: 14px;
+  bottom: 82px;
+  display: grid;
+  width: min(340px, calc(100vw - 28px));
+  gap: 7px;
+  pointer-events: none;
+}
+
+.toast {
+  display: grid;
+  grid-template-columns: 32px 1fr 26px;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  border: 1px solid var(--shell-border);
+  border-radius: 7px;
+  background: var(--shell-panel-strong);
+  box-shadow: 0 16px 42px rgba(3, 7, 12, 0.28);
+  color: var(--shell-text);
+  pointer-events: auto;
+  animation: toast-in 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.toast-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(158, 220, 85, 0.17);
+  color: #b9ef73;
+}
+
+.toast > span:nth-child(2) {
+  display: grid;
+  gap: 3px;
+}
+
+.toast strong { font-size: 11px; }
+.toast small { color: var(--shell-muted); font-size: 9.5px; line-height: 1.35; }
+.toast button {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--shell-muted);
+}
+
+.toast button:hover { background: rgba(255, 255, 255, 0.08); }
+
+.lock-screen {
+  position: absolute;
+  z-index: 12000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #f8fbff;
+  animation: lock-in 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.lock-screen__scrim {
+  position: absolute;
+  inset: -22px;
+  background: #111923 url('/aster-wallpaper.svg') center / cover no-repeat;
+  filter: blur(14px) brightness(0.58) saturate(0.88);
+  transform: scale(1.05);
+}
+
+.lock-screen__content {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.lock-screen__content .desktop-clock {
+  margin-bottom: 54px;
+  justify-items: center;
+}
+
+.lock-screen__content .desktop-clock__time {
+  font-size: clamp(64px, 9vw, 112px);
+  font-weight: 240;
+}
+
+.lock-screen__content .desktop-clock__date {
+  color: rgba(247, 251, 255, 0.76);
+}
+
+.lock-screen__avatar {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  background: rgba(232, 173, 90, 0.94);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
+  color: #21160b;
+  font-size: 20px;
+  font-weight: 680;
+  text-shadow: none;
+}
+
+.lock-screen__content > strong {
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.lock-screen__content > button {
+  min-width: 112px;
+  height: 36px;
+  margin-top: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #f8fbff;
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+}
+
+.lock-screen__content > button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes wallpaper-arrive {
+  from { transform: scale(1.08); filter: blur(12px) saturate(0.75); }
+  to { transform: scale(1.015); filter: blur(0) saturate(1); }
+}
+
+@keyframes panel-in {
+  from { transform: translateX(-50%) translateY(12px) scale(0.98); opacity: 0; filter: blur(6px); }
+  to { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; filter: blur(0); }
+}
+
+.control-panel,
+.notification-panel {
+  animation-name: panel-right-in;
+}
+
+@keyframes panel-right-in {
+  from { transform: translateY(-8px) scale(0.98); opacity: 0; filter: blur(5px); }
+  to { transform: translateY(0) scale(1); opacity: 1; filter: blur(0); }
+}
+
+@keyframes context-in {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes toast-in {
+  from { transform: translateX(18px); opacity: 0; filter: blur(5px); }
+  to { transform: translateX(0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes lock-in {
+  from { opacity: 0; filter: blur(8px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@media (max-width: 900px) {
+  .desktop-glance {
+    right: 22px;
+  }
+
+  .launcher-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-sheet {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .topbar-active,
+  .status-cluster {
+    display: none;
+  }
+
+  .desktop-shortcuts {
+    top: 18px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    grid-template-columns: repeat(4, minmax(64px, 1fr));
+    grid-auto-rows: 82px;
+  }
+
+  .desktop-shortcut {
+    width: 100%;
+  }
+
+  .desktop-glance {
+    top: auto;
+    right: 18px;
+    bottom: 88px;
+    width: 228px;
+  }
+
+  .desktop-clock__time {
+    font-size: 44px;
+  }
+
+  .glance-weather,
+  .glance-agenda {
+    display: none;
+  }
+
+  .window-layer {
+    inset: 0 0 64px;
+  }
+
+  .dock {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    height: 58px;
+    justify-content: space-around;
+    gap: 1px;
+    transform: none;
+  }
+
+  .dock-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .app-icon--dock {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dock-separator,
+  .dock-button--utility {
+    display: none;
+  }
+
+  .launcher-panel {
+    bottom: 69px;
+    left: 8px;
+    width: calc(100vw - 16px);
+    max-height: calc(100vh - 114px);
+    padding: 18px;
+    transform: none;
+  }
+
+  .launcher-panel.system-panel {
+    animation-name: panel-mobile-in;
+  }
+
+  .launcher-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .launcher-footer {
+    margin: 16px -18px -18px;
+  }
+
+  .control-panel,
+  .notification-panel {
+    top: 42px;
+    right: 8px;
+    width: calc(100vw - 16px);
+  }
+
+  .toast-stack {
+    right: 8px;
+    bottom: 70px;
+    width: calc(100vw - 16px);
+  }
+
+  @keyframes panel-mobile-in {
+    from { transform: translateY(12px) scale(0.98); opacity: 0; filter: blur(5px); }
+    to { transform: translateY(0) scale(1); opacity: 1; filter: blur(0); }
+  }
+}
+
+@media (max-height: 520px) and (max-width: 900px) {
+  .desktop-shortcuts,
+  .desktop-glance {
+    display: none;
+  }
+
+  .window-layer {
+    inset: 0 0 58px;
+  }
+
+  .dock {
+    bottom: 4px;
+    height: 52px;
+  }
+
+  .dock-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .window-frame__content > .calculator-app {
+    height: 510px;
+    min-height: 510px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .calculator-app .calculator-history {
+    display: none;
+  }
+
+  .window-frame__content > .calendar-app {
+    height: 590px;
+    min-height: 590px;
+  }
+}
+
+@media (max-width: 430px) {
+  .desktop-shortcuts {
+    grid-template-columns: repeat(3, minmax(64px, 1fr));
+  }
+
+  .desktop-glance {
+    right: 14px;
+  }
+
+  .launcher-head strong {
+    font-size: 15px;
+  }
+
+  .launcher-search kbd {
+    display: none;
+  }
+
+  .launcher-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .launcher-app {
+    grid-template-columns: 38px 1fr;
+    gap: 7px;
+    padding: 7px 5px;
+  }
+
+  .app-icon--launcher {
+    width: 38px;
+    height: 38px;
+  }
+
+  .toggle-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
